@@ -1,9 +1,9 @@
 const UserModel = require('../../schemas/user');
 
-module.exports = ({Id }) => new Promise((resolve, reject) => {
+module.exports = ({userId }) => new Promise((resolve, reject) => {
     
 
-    UserModel.findById({Id})
-        .then(() => resolve({ code: 104, message: 'find result ' }))
+    UserModel.find({_id: userId})
+        .then(() => resolve({ code: 104, message: 'updated data ' +name }))
         .catch(err => reject({ code: 105, message: 'User not fined on given details.', error: err }));
 });
