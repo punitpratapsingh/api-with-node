@@ -8,5 +8,5 @@ module.exports = ({ name, phone }) => new Promise((resolve, reject) => {
 
     userObject.find({name: 'punit'})
         .then(() => resolve({ code: 104, message: 'find result ' }))
-        .catch(err => reject({ code: 105, message: 'User not saved given details.', error: err }));
+        .catch(err => reject({ code: 105, message: 'User not fined on given details.', error: err }));
 });

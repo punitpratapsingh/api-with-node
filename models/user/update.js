@@ -7,6 +7,6 @@ module.exports = ({ name, phone }) => new Promise((resolve, reject) => {
     });
 
     userObject.update({name: 'punitsingh'})
-        .then(() => resolve({ code: 106, message: 'find result ' }))
-        .catch(err => reject({ code: 107, message: 'User not saved.', error: err }));
+        .then(() => resolve({ code: 106, message: 'updated  ' }))
+        .catch(err => reject({ code: 107, message: 'not updated', error: err }));
 });
